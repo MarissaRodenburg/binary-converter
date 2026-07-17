@@ -1,0 +1,38 @@
+# Vivado generated directories (safe to delete/regenerate anytime)
+blinky.cache/
+blinky.hw/
+blinky.ip_user_files/
+blinky.runs/
+blinky.sim/
+blinky.gen/
+blinky.srcs/sources_1/bd/*/hw_handoff/
+
+# Vivado log/journal/misc clutter
+*.wpc
+*.lpr
+*.jou
+*.log
+*.str
+*.xpr
+.Xil/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.srcs/*/ip/
+*_synth_1/
+*_impl_1/
+*.gen/
+vivado*.jou
+vivado*.log
+
+# Generated checkpoint files (even though they're under .srcs/)
+*.dcp
+
+# VS Code (if you don't want editor settings shared/tracked)
+.vscode/
+
+# OS junk
+.DS_Store
+*~
