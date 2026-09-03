@@ -26,10 +26,10 @@ module top (
     output wire [3:0]  AN,
     output wire [6:0]  SEG,
     output wire        DP,
-    output wire [15:0] LED
+    output wire        LED
 );
 
-    // overflow check + clamp - when over 9999, we display nothing and turn on LED 1
+    // overflow check - when over 9999, blank the display and light LED0
     wire overflow = (SW > 16'd9999);
 
     // binary_to_bcd instance
@@ -51,11 +51,11 @@ module top (
         .SEG (SEG),
         .DP  (DP)
     );
-
+    
     assign AN = overflow ? 4'b1111 : AN_from_mux;
 
-    // LED[1] turns lights on overflow
-    assign LED[1] = overflow;
+    // LED[0] turns lights on overflow
+    assign LED = overflow;
 
 endmodule
 

@@ -10,16 +10,15 @@
 // Target Devices: 
 // Tool Versions: 
 // Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments: 7-segment display driver
+// -- 7-segment display driver -- 
 //  Cycles through the 4 digits at a refresh rate fast enough to look solid, and internally decodes each BCD nibble to a 7-seg pattern. 
 //  Doesn't know or care about overflow - just displays whatever BCD value it's handed.
+//
+// Dependencies: 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments: 
 //////////////////////////////////////////////////////////////////////////////////
-
 
 module display_mux (
     input  wire        clk,
